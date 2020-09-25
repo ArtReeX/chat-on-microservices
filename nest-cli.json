@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/chat-on-microservices/src",
+  "monorepo": true,
+  "root": "apps/chat-on-microservices",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/chat-on-microservices/tsconfig.app.json"
+  },
+  "projects": {
+    "chat-on-microservices": {
+      "type": "application",
+      "root": "apps/chat-on-microservices",
+      "entryFile": "main",
+      "sourceRoot": "apps/chat-on-microservices/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/chat-on-microservices/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    }
+  }
+}
